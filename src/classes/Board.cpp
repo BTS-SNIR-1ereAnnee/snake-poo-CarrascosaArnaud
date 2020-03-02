@@ -27,7 +27,7 @@ Board *Board::getInstance ()
       }
   }
 
-
+//Construteur par defaut
 Board::Board()
 {
     initscr();
@@ -36,6 +36,7 @@ Board::Board()
     this->dessinerPlateau();
 }
 
+//Destructeur
 Board::~Board()
 {
     endwin();//RAZ du curseur

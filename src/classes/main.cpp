@@ -1,6 +1,5 @@
 /*
  Projet: snake
- Auteur: Sylvain Guilbert
 */
 #include <iostream>
 #include "Point.h"
@@ -17,12 +16,53 @@ int main()
     // initialisation des pointeurs
     fenetre = Board::getInstance ();
 
-    Point p(10,4);
+    Point p(10,10);
     p.drawPoint();
-    Point p2(10,5);
-    p2.drawPoint();
-    //cout << "press any key to quit" << endl;
-    getchar();
+   
+    p.moveUp();
+    p.drawPoint();
+    p.moveLeft();
+    p.drawPoint();
+    p.moveDown();
+    p.drawPoint();
+    p.moveRight();
+    p.drawPoint();
+
+    getch();
     fenetre->kill();
     return 0;
 }
+
+/*
+    char input = getch();
+    do {
+        switch (input)
+        {
+
+           case'z': 
+                p.erasePoint();
+                p.moveUp();
+                p.drawPoint();
+                break;
+
+            case'q': 
+                p.erasePoint();
+                p.moveLeft();
+                p.drawPoint();
+                break;
+
+            case's': 
+                p.erasePoint();
+                p.moveDown();
+                p.drawPoint();
+                break;
+
+            case'd': 
+                p.erasePoint();
+                p.moveRight();
+                p.drawPoint();
+                break;
+        }
+            
+    }while(getch() != 'x'); 
+*/
