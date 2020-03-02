@@ -11,19 +11,25 @@ using namespace std;
 int main()
 {
 
-    // pointeurs sur l'unique instance de la classe UniqueObject
+    // Pointeurs sur l'unique instance de la classe UniqueObject
     Board *fenetre;
-    // initialisation des pointeurs
+
+    // Initialisation des pointeurs
     fenetre = Board::getInstance ();
 
-    Point p(10,10);
-    p.drawPoint();
-
+    // Variable
     char input;
+
+    Point p(10,10); // Placement du point 
+    p.drawPoint(); // Afficher le point 
+
+    // Boucle pour déplacer le point en l'affichant 
     do {
-    input = getch();
-        p.erasePoint();
-        switch (input)
+
+        input = getch(); // Permet d'utiliser la saisie de l'utilisateur 
+        p.erasePoint(); // Permet d'effacer le point 
+
+        switch (input) // Traite la saisie
         {
 
            case'z':
@@ -44,11 +50,11 @@ int main()
 
         }
         
-        p.drawPoint();
+        p.drawPoint(); // Dessine le point
             
-    }while(input != 'x'); 
+    }while(input != 'x'); // Condition de sortie
 
-    fenetre->kill();
+    fenetre->kill(); // Fermer proprement
+
     return 0;
-
 }
