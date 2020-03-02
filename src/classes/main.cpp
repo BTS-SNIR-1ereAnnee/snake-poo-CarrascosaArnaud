@@ -18,51 +18,37 @@ int main()
 
     Point p(10,10);
     p.drawPoint();
-   
-    p.moveUp();
-    p.drawPoint();
-    p.moveLeft();
-    p.drawPoint();
-    p.moveDown();
-    p.drawPoint();
-    p.moveRight();
-    p.drawPoint();
 
-    getch();
-    fenetre->kill();
-    return 0;
-}
-
-/*
-    char input = getch();
+    char input;
     do {
+    input = getch();
+        p.erasePoint();
         switch (input)
         {
 
-           case'z': 
-                p.erasePoint();
+           case'z':
                 p.moveUp();
-                p.drawPoint();
                 break;
 
             case'q': 
-                p.erasePoint();
                 p.moveLeft();
-                p.drawPoint();
                 break;
 
-            case's': 
-                p.erasePoint();
+            case's':
                 p.moveDown();
-                p.drawPoint();
                 break;
 
             case'd': 
-                p.erasePoint();
                 p.moveRight();
-                p.drawPoint();
                 break;
+
         }
+        
+        p.drawPoint();
             
-    }while(getch() != 'x'); 
-*/
+    }while(input != 'x'); 
+
+    fenetre->kill();
+    return 0;
+
+}
