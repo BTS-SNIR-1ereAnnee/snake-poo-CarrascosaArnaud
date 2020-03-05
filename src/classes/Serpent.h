@@ -7,6 +7,9 @@ class Point;
 class Serpent
 { 
 public:
+	Serpent();
+	~Serpent();
+
 	void ajouterPoint(Point p);
 	void afficher();
 
