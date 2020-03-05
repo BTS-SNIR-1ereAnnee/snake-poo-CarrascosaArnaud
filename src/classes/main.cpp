@@ -4,13 +4,14 @@
 #include <iostream>
 #include "Point.h"
 #include "Board.h"
+#include "Serpent.h"
 
 
 using namespace std;
 
 int main()
 {
-
+/*
     // Pointeurs sur l'unique instance de la classe UniqueObject
     Board *fenetre;
 
@@ -25,5 +26,12 @@ int main()
     clear();
     fenetre->kill(); 
 
+*/
+    Point p;
+    Serpent snake;
+    snake.afficher();
+    snake.ajouterPoint(p);
+    snake.ajouterPoint(p);
+    snake.afficher();
     return 0;
 }
