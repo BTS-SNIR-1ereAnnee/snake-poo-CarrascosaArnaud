@@ -11,27 +11,33 @@ using namespace std;
 
 int main()
 {
-/*
+
     // Pointeurs sur l'unique instance de la classe UniqueObject
     Board *fenetre;
+
+    Serpent snake;
 
     // Initialisation des pointeurs
     fenetre = Board::getInstance ();
 
+    Point p; // Placement du point 
+    noecho(); // Cache l'input
 
-    Point p(10,10); // Placement du point 
-    p.drawPoint(); // Afficher le point 
+    move(10,10);
+
+    refresh();
+    snake.afficher();
+
+    getch();
+    snake.ajouterPoint(p);
+    snake.afficher();
+
+    getch();
 
     // Fermer proprement
     clear();
     fenetre->kill(); 
 
-*/
-    Point p;
-    Serpent snake;
-    snake.afficher();
-    snake.ajouterPoint(p);
-    snake.ajouterPoint(p);
-    snake.afficher();
+
     return 0;
 }

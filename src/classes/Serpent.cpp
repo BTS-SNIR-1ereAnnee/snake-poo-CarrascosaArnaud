@@ -4,30 +4,38 @@
 
 using namespace std;
 
+// Constructeur par défaut
 Serpent::Serpent()
 {
-   	this -> m_index = 1;
+   	this -> m_index = 3; // Taille de départ du snake
 
 }
 
-Serpent::~Serpent()
+// Destructeur par défaut	
+Serpent::~Serpent() 
 {
 
 
 }
 
+// Affiche les points
 void Serpent::afficher()
 {
 	for(int i=0; i<m_index; i++)
 	{
-		cout << '*';
+		printw("*"); // Affiche dans la fenêtre
 	}
-	cout << endl;
 }
 
+// Ajout des points 
 void Serpent::ajouterPoint(Point p)
 {
 
 	this -> serpent[m_index] = p;
 	m_index++;
+}
+
+void Serpent::deplacer()
+{
+
 }

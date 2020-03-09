@@ -12,6 +12,7 @@ public:
 
 	void ajouterPoint(Point p);
 	void afficher();
+	void deplacer();
 
 private:
 	Point serpent[20];
