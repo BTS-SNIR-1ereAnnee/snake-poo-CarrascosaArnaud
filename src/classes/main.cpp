@@ -5,34 +5,31 @@
 #include "Point.h"
 #include "Board.h"
 #include "Serpent.h"
+#include <unistd.h>
 
 
 using namespace std;
 
 int main()
 {
+    cout << "test\n";
+    Serpent snake;
 
     // Pointeurs sur l'unique instance de la classe UniqueObject
     Board *fenetre;
 
-    Serpent snake;
-
-    // Initialisation des pointeurs
-    fenetre = Board::getInstance ();
 
     Point p; // Placement du point 
-    noecho(); // Cache l'input
+    //noecho(); // Cache l'input
 
-    move(10,10);
 
-    refresh();
-    snake.afficher();
-
-    getch();
-    snake.ajouterPoint(p);
-    snake.afficher();
-
-    getch();
+    
+    for (int i = 0; i < 6; i++)
+    {
+        usleep(300000);
+        snake.afficher();
+        snake.deplacer();
+    }
 
     // Fermer proprement
     clear();
