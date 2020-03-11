@@ -40,8 +40,15 @@ void Serpent::afficher()
 
 void Serpent::deplacer()
 {
-	for(int i=0; i<=m_index; i++)
+
+	int xTemp = serpent[0].getX();
+	int yTemp = serpent[0].getY();
+	serpent[0].moveUp();
+	serpent[1].setX(xTemp);
+	serpent[1].setY(yTemp);
+	for (int i = 2; i<=m_index; i++)
 	{
-		serpent[i].moveUp();
+		serpent[i].setX(serpent[i-1].getX());
+		serpent[i].setY(serpent[i-1].getY());
 	}
 }
