@@ -31,7 +31,7 @@ void Serpent::ajouterPoint(Point p)
 // Affiche les points
 void Serpent::afficher()
 {
-	for(int i = 0; i <=m_index; i++)
+	for(int i = 0; i <= m_index; i++)
 	{
 		serpent[m_index-1].erasePoint();
 		serpent[i].drawPoint();

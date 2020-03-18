@@ -17,14 +17,15 @@ int main()
 
     // Pointeurs sur l'unique instance de la classe UniqueObject
     Board *fenetre;
-
+    
+    fenetre = Board::getInstance();
 
     Point p; // Placement du point 
     //noecho(); // Cache l'input
 
 
     
-    for (int i = 0; i < 6; i++)
+    for (int i = 0; i < 8; i++)
     {
         usleep(300000);
         snake.afficher();
